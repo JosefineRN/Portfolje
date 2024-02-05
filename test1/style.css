@@ -1,0 +1,75 @@
+.ferdigheter {
+    content: 10px;
+    padding: 10px, 10px, 10px, 10px;
+    border: 2px, black;
+    border: solid;
+    margin: 15px;
+    
+}
+
+.meny {
+    background-color:none;
+    margin-left: 400px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.meny ul{
+    display: inline-block;
+    justify-content: space-between 30px;
+
+}
+
+.meny ul li{
+    display: inline-block;
+    justify-content: space-between 30px;
+    padding: 7px;
+}
+
+.meny ul li a{
+    display: inline-block;
+    justify-content: space-between 30px;
+    text-decoration: none ;
+    font-size: 20px;
+    color: #707070;
+}
+
+.dotter {
+    place-items: start;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#dot1 {
+
+    background-color:#162625
+}
+
+#dot2 {
+
+    background-color:#2F594A
+}
+
+#dot3 {
+
+    background-color:#4A8C74
+}
+
+#dot4 {
+
+    background-color:#69BFA0
+}
+
+.prosjekt_box {
+    padding: 10px;
+    border: 30px;
+    margin: 10px;
+}
+
+

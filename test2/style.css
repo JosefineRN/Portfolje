@@ -1,0 +1,60 @@
+/* * betyr at det gjelder hele siden */
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+/* definerer posisjon til elementer */
+.main-container {
+/* sier at vi skal bruke en grid */
+    display: grid;
+/* her sier vi at vi skal ha 3 kolonner, vi bruker "fr" for at uansett hvilket formar du har er det 3 like store kolonner */
+    grid-template-columns: 1fr, 1fr, 1fr;
+/* vi setter rekkene til "auto" fordi dette er det enkleste */
+    grid-template-rows: auto;
+/* her sier vi hvor store hver av sekjsonene skal være. Det er 3 av hver forid vi har 3 kolloner */
+    grid-template-areas:
+/* her sier vi at "header" skal strekke seg over alle kollonene */
+    "header header header"
+/* her sier vi at "body" skal strekke seg over 2 av kollonene, og at "sidebar" bare trenger 1 kollone */
+    "body body sidebar"
+    "body body sidebar"
+    "footer footer footer";
+}
+
+/* definer klasser
+definerer klasse også sub klasse */
+.main-container .main-header {
+    grid-area: header;
+    grid-row: auto;
+}
+
+.main-container .main-header #pic1{
+    width: 100%;
+    height: auto;
+
+}
+
+.main-container .main-body {
+    grid-area: body;
+}
+
+.main-container .main-body #pic1{
+    width: 100%;
+    height: auto;
+
+}
+
+.main-container .main-sidebar {
+    grid-area: sidebar;
+}
+
+.main-container .main-sidebar #pic1{
+    width: 100%;
+    height: auto;
+
+}
+
+.main-container .main-footer {
+    grid-area: footer;
+}

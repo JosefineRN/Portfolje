@@ -1,0 +1,387 @@
+/* * betyr at det gjelder hele siden */
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+/* GRID */
+
+/* definerer posisjon til elementer */
+.main-container {
+/* sier at vi skal bruke en grid */
+    display: grid;
+/* her sier vi at vi skal ha 1 kolonne*/
+    grid-template-columns: 1fr;
+/* vi setter rekkene til "auto" fordi dette er det enkleste */
+    grid-template-rows: 1fr, 1fr, 1fr;
+/* her sier vi hvor store hver av sekjsonene skal være. Det er 3 av hver forid vi har 3 kolloner */
+    grid-template-areas:
+/* her sier vi at "header" skal strekke seg over alle kollonene */
+    "header"
+/* her sier vi at "body" skal strekke seg over 1 kollone som i dette tilfellet er hele siden */
+    "body"
+    "footer";
+}
+
+
+/* definer klasser
+definerer klasse og så sub klasse */
+.main-container .main-header {
+    grid-area: header;
+    grid-row: auto;
+    /* background-color: red; */
+}
+
+
+.main-container .main-body {
+    grid-area: body;
+}
+
+
+.main-container .main-footer {
+    grid-area: footer;
+}
+
+
+
+/* NAV-BAR*/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2F594A;
+}
+
+nav li {
+    float: left;
+}
+
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #4A8C74;
+}
+
+nav .active {
+    background-color: #69BFA0;
+}
+
+.liten_knapp {
+    float: right;
+}
+
+
+/* FØRSTE NAV-BAR FORSØK */
+
+
+/* .main-container .main-header .meny {
+    background-color:none;
+    margin-left: 400px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.main-container .main-header .meny .ul{
+    display: inline-block;
+    justify-content: space-between 30px;
+}
+
+.main-container .main-header .meny .ul .li{
+    display: inline-block;
+    justify-content: space-between 30px;
+    padding: 7px;
+}
+
+.main-container .main-header .meny .ul .li .a{
+    display: inline-block;
+    justify-content: space-between 30px;
+    text-decoration: none ;
+    font-size: 20px;
+    color: #707070;
+} */
+
+
+
+/* ENKELT ELEMENTER */
+
+.overskrifter {
+    font-size: 70px;
+    padding: 14px;
+}
+
+p {
+    padding: 10px;
+}
+
+.tekst {
+    font-size: 35px;
+    text-align: left;
+    padding: 14px;
+}
+
+
+
+.lenke a:link {
+    padding: 14px;
+    font-size: 15px;
+}
+
+.lenke a:visited {
+    color: #005E7B;
+}
+
+
+/* a:visited{ color: red;} */
+
+/* .lenke a {
+    text-decoration: none;
+    font-weight: 2000;
+    color:rgb(36, 36, 36);
+    color: #000;
+}  */
+
+
+
+/* BOKSER */
+
+.ferdigheter {
+    content: 10px;
+    padding: 10px, 10px, 10px, 10px;
+    border: 2px, black;
+    border: solid;
+    margin: 15px;
+}
+
+.prosjekt_box {
+    content: 10px;
+    padding: 10px, 10px, 10px, 10px;
+    border: 2px, black;
+    border: solid;
+    margin: 15px;
+}
+
+/* FØRSTE PROSJEKT-BOKS FORSØK */
+
+/* .prosjekt_box {
+    padding: 10px;
+    border: 30px;
+    margin: 10px;
+} */
+
+
+.tekst_box {
+    width: 900px;
+    padding: 10px;
+    margin: 5px;
+}
+
+
+/* KNAPPER TIL UNDERSIDER*/
+
+
+.main-body .knapper a:link{
+    background-color: #2F594A;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    /* display: block; */
+    float: left;
+    /* display: flex; */
+    list-style-type: none;
+    display: flex !important;
+}
+
+.main-body .knapper a:hover {
+    background-color: #4A8C74;
+    list-style-type: none;
+}
+
+.main-body .knapper div:active{
+    background-color: #69BFA0;
+    list-style-type: none;
+}
+
+.knapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 10px;
+    margin-top: 15px;
+    
+}
+
+.knapper a {
+    list-style-type: none;
+    border-radius: 12px;
+}
+
+.knapper ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/* KNAPPER TIL FORSIDE */
+
+.main-footer .knapper a:link, a:visited{
+    background-color: #2F594A;
+    color: white;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    /* display: block; */
+    float: left;
+    /* display: flex; */
+    list-style-type: none;
+    display: flex !important;
+}
+
+.main-body .knapper a:hover {
+    background-color: #4A8C74;
+    list-style-type: none;
+}
+
+.main-body .knapper a:active {
+    background-color: #69BFA0;
+    list-style-type: none;
+}
+
+.knapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.knapper a {
+    list-style-type: none;
+    border-radius: 12px;
+}
+
+.knapper ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main-body .knapper a:visited {
+    color: white;
+}
+
+
+
+
+/* SIRKLER/DOTTER */
+
+
+.main-container .main-header .dotter {
+    place-items: start;
+    margin-right: 10px;
+    margin-left: 1100px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.main-container .main-header .dotter .dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#dot1 {
+
+    background-color:#162625
+}
+
+#dot2 {
+
+    background-color:#2F594A
+}
+
+#dot3 {
+
+    background-color:#4A8C74
+}
+
+#dot4 {
+
+    background-color:#69BFA0
+}
+
+
+/* OM MEG */
+.ommeg {
+    float: right;
+    justify-content: right;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#ommeg_overskrift {
+    font-size: 70px;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    float: center;
+}
+
+
+
+/* BILDER  */
+
+/* .parent {
+    position: relative;
+    /* text-align: center; */
+    /* top: 0;
+    left: 0; */
+    /* display: flex;
+    justify-content: center;
+
+} */
+
+/* .bilde1 {
+    position: relative;
+    /* top: 0;
+    left: 0; */
+/* } */
+/* 
+.bilde2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}  */
+
+
+#bilde1 {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+#bilde2 {
+    justify-content: left;
+    float: left;
+    text-align: left;
+    display: flex !important;
+    flex-direction: column;
+    height: 259px;
+    width: 259px;
+}
